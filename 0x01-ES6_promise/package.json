@@ -1,0 +1,24 @@
+{
+  "name": "0x01-es6_promise",
+  "version": "1.0.0",
+  "description": "Curriculum Short Specializations Average: 68.29% You just released the advanced tasks of this project. Have fun! 0x01. ES6 Promises JavaScriptES6",
+  "main": "0-main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "echo \"Error: no file specified\" && exit 1",
+    "dev:0": "node 0-main.js",
+    "dev:1": "node 1-main.js",
+    "dev:2": "node 2-main.js",
+    "dev:3": "node 3-main.js",
+    "dev:4": "node 4-main.js",
+    "dev:5": "node 5-main.js",
+    "dev:6": "node 6-main.js",
+    "dev:7": "node 7-main.js",
+    "dev:8": "node 8-main.js",
+    "dev:9": "node 9-main.js",
+    "dev:100": "node 100-main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
