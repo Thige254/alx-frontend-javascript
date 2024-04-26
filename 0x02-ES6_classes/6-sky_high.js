@@ -1,18 +1,18 @@
-import Building from './5-building.js';
+import signUpUser from './4-user-promise';
+import uploadPhoto from './5-photo-reject';
 
-class SkyHighBuilding extends Building {
-  constructor(sqft, floors) {
-    super(sqft);
-    this._floors = floors;
-  }
-
-  get floors() {
-    return this._floors;
-  }
-
-  evacuationWarningMessage() {
-    return `Evacuate slowly the ${this._floors} floors`;
-  }
+export default function handleProfileSignup(firstName, lastName, fileName) {
+  const promises = [
+    signUpUser(firstName, lastName),
+    uploadPhoto(fileName)
+  ];
+  
+  return Promise.allSettled(promises).then(results => {
+    return results.map(result => {
+      return {
+        status: result.status,
+        value: result.status === 'fulfilled' ? result.value : result.reason
+      };
+    });
+  });
 }
-
-export default SkyHighBuilding;
