@@ -1,0 +1,11 @@
+{
+  "name": "0x02-es6_classes",
+  "version": "1.0.0",
+  "description": "Curriculum Short Specializations Average: 33.9% You have a captain's log due before 2024-04-28 (in 2 days)! Log it now! 0x02. ES6 classes OOPJavaScriptES6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
