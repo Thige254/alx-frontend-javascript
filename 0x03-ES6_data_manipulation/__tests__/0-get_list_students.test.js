@@ -1,20 +1,17 @@
-// tests/0-get_list_students.test.js
-import getListStudents from '../0-get_list_students.js';
+import getListStudents from '../0-get_list_students';
 
-describe('getListStudents', () => {
-  it('should return an array of students with id, firstName, and location', () => {
+describe('getListStudents function', () => {
+  test('should return an array of students', () => {
+    expect.assertions(1);
     const students = getListStudents();
-    
-    expect(students).toEqual([
-      { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
-      { id: 2, firstName: 'James', location: 'Columbia' },
-      { id: 5, firstName: 'Serena', location: 'San Francisco' }
-    ]);
+    expect(students).toHaveLength(3);
   });
 
-  it('should return an array of length 3', () => {
+  test('should have correct student data', () => {
+    expect.assertions(3);
     const students = getListStudents();
-    
-    expect(students.length).toBe(3);
+    expect(students[0]).toEqual({ id: 1, firstName: 'Guillaume', location: 'San Francisco' });
+    expect(students[1]).toEqual({ id: 2, firstName: 'James', location: 'Columbia' });
+    expect(students[2]).toEqual({ id: 5, firstName: 'Serena', location: 'San Francisco' });
   });
 });
